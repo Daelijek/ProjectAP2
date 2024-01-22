@@ -1,0 +1,24 @@
+{{template "base" .}}
+{{define "title"}} Article {{end}}
+{{define "css" }}
+    <link rel="stylesheet" href="/static/css/custom-article.css">
+{{end}}
+{{define "main"}}
+    <div class="article-container" id="news">
+        {{range .Articles}}
+            <div class="article-image mb-4">
+                <img src="/static/img/article-image.jpg" class="img-fluid" alt="Article Image">
+            </div>
+            <div class="article-title mb-4">
+                <h2>{{.Title}}</h2>
+            </div>
+            <div class="article-text mb-4">
+                <p>{{.Text}}</p>
+            </div>
+        {{else}}
+            <div class="not-found">
+                <h1>Not Found</h1>
+            </div>
+        {{end}}
+    </div>
+{{end}}

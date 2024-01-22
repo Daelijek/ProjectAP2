@@ -1,0 +1,12 @@
+{{template "base" .}}
+{{define "title"}}Home{{end}}
+{{define "css"}}
+    <link rel="stylesheet" href="/static/css/custom-home.css">
+{{end}}
+{{define "main"}}
+    <div class="custom-container" id="custom-news">
+        {{range .Articles}}
+            <div class="custom-row" id="custom-article">
+                <div class="custom-col-md-3">
+                    <img src="/static/img/custom-article-image.jpg" class="custom-article-img" alt="Custom Article Image">
+                </div>

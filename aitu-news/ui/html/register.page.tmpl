@@ -1,0 +1,30 @@
+{{template "base" .}}
+{{define "title"}}Registration{{end}}
+{{define "css"}}
+    <link rel="stylesheet" href="/static/css/custom-registration.css">
+{{end}}
+{{define "main"}}
+    <div class="custom-registration-container">
+        <form action="/auth/register" method="post">
+            <div class="custom-form-group">
+                <label for="name" class="custom-form-label">Name</label>
+                <input type="text" class="custom-form-control" name="name">
+            </div>
+            <div class="custom-form-group">
+                <label for="lastname" class="custom-form-label">Lastname</label>
+                <input type="text" class="custom-form-control" name="lastname">
+            </div>
+            <div class="custom-form-group">
+                <label for="email" class="custom-form-label">Email address</label>
+                <input type="email" class="custom-form-control" name="email">
+            </div>
+            <div class="custom-form-group">
+                <label for="password" class="custom-form-label">Password</label>
+                <input type="password" class="custom-form-control" name="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+            <br>
+            <a href="/auth/login">Already have an account? Login</a>
+        </form>
+    </div>
+{{end}}
