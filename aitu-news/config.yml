@@ -1,0 +1,11 @@
+db:
+  host: localhost
+  port: 5432
+  user: postgres
+  password: postgres
+  dbname: AITU-news
+
+server:
+  port: 4000
+  staticDir: ./ui/static/
+  sessionSecret: secretword564897234Q#423454323425

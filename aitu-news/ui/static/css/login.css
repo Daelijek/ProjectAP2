@@ -1,0 +1,14 @@
+#headerImg{
+    display: none;
+}
+#registrationForm{
+    margin-top: 150px!important;
+}
+
+#registrationForm form{
+    padding: 20px;
+    margin: auto;
+    max-width: 400px;
+    border: #163269 solid 2px;
+    border-radius: 20px;
+}

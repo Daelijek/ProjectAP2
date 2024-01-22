@@ -1,0 +1,42 @@
+{{template "base" .}}
+{{define "title"}}Новости{{end}}
+{{define "css" }}
+    <link rel="stylesheet" href="/static/css/home.css">
+{{end}}
+{{define "main"}}
+    <div class="container">
+            <div class="dropdown ">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Категория
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="/articles/students">Студентам</a></li>
+                    <li><a class="dropdown-item" href="/articles/staff">Работникам</a></li>
+                    <li><a class="dropdown-item" href="/articles/applicants">Абитурентам</a></li>
+                    <li><a class="dropdown-item" href="/articles/researchers">Исселдователям</a></li>
+                </ul>
+            </div>
+    </div>
+    <div class="container" id="news">
+        {{range .Articles}}
+            <div class="row" id="article">
+                <div class="col-md-3">
+                    <img src="/static/img/articleImg1.jpg" class="articleImg" alt="">
+                </div>
+                <div class="col-md-9">
+                    <a href="/article?id={{.ID}}"><h2>{{.Title}}</h2></a>
+                    <p>{{.Text}}</p>
+                </div>
+                <div class="row mb-4" >
+                    <div class="col-md">
+                        <span id="publicationDate">Дата публикации: {{.FormattedDate}}</span>
+                    </div>
+                </div>
+            </div>
+
+        {{else}}
+            <h1>not found</h1>
+        {{end}}
+    </div>
+
+{{end}}

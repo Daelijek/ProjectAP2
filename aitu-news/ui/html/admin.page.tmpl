@@ -1,0 +1,36 @@
+{{template "base" .}}
+{{define "title"}}Админ страница{{end}}
+{{define "css" }}
+    <link rel="stylesheet" href="/static/css/login.css">
+{{end}}
+{{define "main"}}
+    <div class="container-sm" id="registrationForm">
+
+        <form action="/article/create" method="post" enctype="multipart/form-data">
+            <h2>Создать статью</h2>
+            <div class="mb-3">
+                <label for="title" class="form-label">Заголовок</label>
+                <input type="text" class="form-control" name="title" id="title">
+            </div>
+            <div class="mb-3">
+                <label for="text" class="form-label">Текст</label>
+                <textarea class="form-control" name="text" id="text" cols="30" rows="10"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="category" class="form-label">Категория</label>
+                <select class="form-control" name="category" id="category" >
+                    <option value="1">Студентам</option>
+                    <option value="2">Сотрудникам</option>
+                    <option value="3">Абитуриентам</option>
+                    <option value="4">Исследователям</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Картинка</label>
+                <input type="file" class="form-control" name="image" id="image" >
+            </div>
+            <button type="submit" class="btn btn-primary">Загрузить</button>
+            <br>
+        </form>
+    </div>
+{{end}}

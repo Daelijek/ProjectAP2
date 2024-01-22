@@ -1,0 +1,23 @@
+*{
+    font-family: "Montserrat", "sans-serif";
+}
+.navbar-brand{
+    font-weight: bold !important;
+}
+
+.navbar-brand:hover{
+    color: white;
+}
+
+.navbar a, .navbar-brand{
+    color: white;
+}
+
+
+nav{
+    background-color: #163269;
+}
+
+#headerImg{
+    margin-top: 75px;
+}
